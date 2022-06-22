@@ -4,29 +4,29 @@ var resultSpan = document.querySelector('.result-of-calc');
 // *** Theme switch functions :
 
 //*** Check for theme sabe in localStorage
-if (localStorage.getItem('prefers-color-scheme') !== null){
-    let cssLink = document.querySelector('#css-theme');
-    let theme = localStorage.getItem('prefers-color-scheme');
-    cssLink.href = "css/styles-"+theme+".css";   
-    document.querySelector('.active').classList.remove('active');
-    document.querySelector('[data-theme="'+theme+'"]').classList.add('active')
-}
+//if (localStorage.getItem('prefers-color-scheme') !== null){
+ //   let cssLink = document.querySelector('#css-theme');
+  //  let theme = localStorage.getItem('prefers-color-scheme');
+  //  cssLink.href = "css/styles-"+theme+".css";   
+//document.querySelector('.active').classList.remove('active');
+//    document.querySelector('[data-theme="'+theme+'"]').classList.add('active')
+//}
 
-let switches = document.querySelectorAll('.switch-button');
+//let switches = document.querySelectorAll('.switch-button');
 
-for (let i = 0; i < switches.length; i++) {
-    switches[i].addEventListener("click", function(){
-        let switchActive =  document.querySelector('.switch-button.active');
-        switchActive.classList.remove("active");
+//for (let i = 0; i < switches.length; i++) {
+  //  switches[i].addEventListener("click", function(){
+     //   let switchActive =  document.querySelector('.switch-button.active');
+       // switchActive.classList.remove("active");
         // switchActive.classList.add("disabled");
-        let cssLink = document.querySelector('#css-theme');
-        let clickedTheme = switches[i].dataset.theme;
-        cssLink.href = "css/styles-"+clickedTheme+".css";
-        localStorage.setItem('prefers-color-scheme',clickedTheme)
+       // let cssLink = document.querySelector('#css-theme');
+      //  let clickedTheme = switches[i].dataset.theme;
+     //   cssLink.href = "css/styles-"+clickedTheme+".css";
+      //  localStorage.setItem('prefers-color-scheme',clickedTheme)
         // switches[i].classList.remove("disabled");
-        switches[i].classList.add("active");
-    })
-}
+       // switches[i].classList.add("active");
+ //   })
+//}
     
 // *** Calculs
 
